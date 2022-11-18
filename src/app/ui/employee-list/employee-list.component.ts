@@ -16,4 +16,8 @@ export class EmployeeListComponent {
   constructor(private _employeeService: EmployeeService) {
   }
 
+  remove(name: string){
+    this._employeeService.delete(name).subscribe(v => alert('User was successfully removed.'));
+  }
+
 }
