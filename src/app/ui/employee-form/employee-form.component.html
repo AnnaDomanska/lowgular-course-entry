@@ -1,9 +1,15 @@
-<form [formGroup]="employeeForm" (ngSubmit)="onFormSubmitted(employeeForm.value)">
-  <input type="text" formControlName="name" placeholder="Name">
-  <input type="number" formControlName="age" placeholder="Age">
-  <input type="number" formControlName="salary" placeholder="Salary">
-  <input type="submit" [disabled]="employeeForm.invalid" value="Submit">
-</form>
+<div class="card"><span class="h1">Employee form</span></div>
+
 <br><br>
-<div [hidden]="employeeForm.invalid">Your new employee: {{ employeeForm.value.name}}, age: {{employeeForm.value.age}} with salary {{employeeForm.value.salary}} $ will be added to the system.
+<div class="text-bg-secondary p-3" style="max-width: 18rem;">
+<form [formGroup]="employeeForm" (ngSubmit)="onFormSubmitted(employeeForm.value)" title="Employee form">
+  <input class= 'col-form-label' type="text" formControlName="name" placeholder="Name"><br><br>
+  <input class= 'col-form-label' type="number" formControlName="age" placeholder="Age"><br><br>
+  <input class= 'col-form-label' type="number" formControlName="salary" placeholder="Salary"><br><br>
+  <input class="btn btn-primary" type="submit" value="Submit" [disabled]="employeeForm.invalid">
+</form>
+</div>
+
+<br><br>
+<div class="p-3 mb-2 bg-info text-white" style="max-width: 18rem;" [hidden]="employeeForm.invalid">Your new employee: {{ employeeForm.value.name}}, age: {{employeeForm.value.age}} with salary {{employeeForm.value.salary}} $ will be added to the system.
 </div>
