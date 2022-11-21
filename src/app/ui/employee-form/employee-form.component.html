@@ -1,12 +1,12 @@
 <div class="card"><span class="h1">Employee form</span></div>
 
 <br><br>
-<div class="text-bg-secondary p-3" style="max-width: 18rem;">
+<div style="max-width: 18rem; background-color: cadetblue">
 <form [formGroup]="employeeForm" (ngSubmit)="onFormSubmitted(employeeForm.value)" title="Employee form">
   <input class= 'col-form-label' type="text" formControlName="name" placeholder="Name"><br><br>
   <input class= 'col-form-label' type="number" formControlName="age" placeholder="Age"><br><br>
   <input class= 'col-form-label' type="number" formControlName="salary" placeholder="Salary"><br><br>
-  <input class="btn btn-primary" type="submit" value="Submit" [disabled]="employeeForm.invalid">
+  <input class="btn" type="submit" value="Submit" style="background-color: skyblue" [disabled]="employeeForm.invalid">
 </form>
 </div>
 
